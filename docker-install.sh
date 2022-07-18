@@ -6,4 +6,13 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
+
+echo "install docker compose"
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)"  -o /usr/local/bin/docker-compose
+sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
+sudo chmod +x /usr/bin/docker-compose
+
+
+
 sudo systemctl status docker
