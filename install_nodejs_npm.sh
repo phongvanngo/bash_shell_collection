@@ -8,5 +8,5 @@ echo "install npm"
 sudo apt install npm 
 
 echo "install yarn"
-npm i -g yarn
+sudo npm i -g yarn
 
